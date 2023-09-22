@@ -1,0 +1,17 @@
+.item-addwishlist {
+   color: #0d29df; 
+}
+
+.item-addwishlist:hover {
+    color: #d90429 !important;
+}
+
+.item-addwishlist-selected {
+  color: #d90429;
+}
+
+
+/* .item-addwishlist {
+    background-color: #d90429 !important;
+    color: #3949ab;
+} */

@@ -4,10 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import configStore from './store/configStore'
+import { Provider} from 'react-redux'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { CookiesProvider } from "react-cookie";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <Provider store={configStore}>
+      <Router>
+        <CookiesProvider defaultSetOptions={ {path: '/'} }>
+        <App />
+        </CookiesProvider>
+      </Router>
+      </Provider>
   </React.StrictMode>
 );
 
